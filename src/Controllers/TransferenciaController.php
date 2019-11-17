@@ -24,7 +24,7 @@ if (isset($_POST['contaRecebedor']) && ($_POST['nomeRecebedor']) && ($_POST['cpf
 
     if (mysqli_stmt_execute($pTransferencia)) {
         
-        $pUpdateRecebedor = mysqli_prepare($db, 'UPDATE Usuarios set saldo = ?');        
+       // $pUpdateRecebedor = mysqli_prepare($db, 'UPDATE Usuarios set saldo = ?');        
         header('Location: ../Views/Dashboard.php');
     }
 } else{
