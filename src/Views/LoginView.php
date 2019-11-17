@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/LoginStyle.css">
-    <title>Bank Account</title>
+    <title>Bank Account TESTE</title>
 </head>
 
 <body>
