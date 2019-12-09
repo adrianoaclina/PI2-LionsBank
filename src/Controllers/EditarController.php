@@ -3,7 +3,7 @@
 include_once("../Configs/validaSession.php");
 include_once("../Configs/conexao.php");
 
-$id = $_GET['id'];
+$id = $_SESSION['idUsuario'];
 
 $busca = "SELECT * FROM usuarios where idUsuario = $id";
 $con = $db->query($busca) or die($db->error);

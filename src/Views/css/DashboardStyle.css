@@ -1,22 +1,93 @@
-
-
 /* Historico de tranf */
-.historicoTranf{
-    margin-top: 4%;
+
+.historicoTranf {
+    margin-top: 5%;
     width: 50%;
+    /* margin-left: 5%; */
+}
+.button{
+    position: fixed;
+    bottom:10px;
+    right:10px;
+}
+.table {
+    border: 1px solid #DA4156;
 }
 
-.table{
-    border: 1px solid orangered;
-}
 .table .thead-dark th {
     color: #fff;
-    background-color: orangered;
-    border-color: orangered;
+    background-color: #DA4156;
+    border-color: #DA4156;
 }
 
-.table td, .table th {
+.table td,
+.table th {
     padding: .75rem;
     vertical-align: top;
-    border-top: 1px solid orangered;
+    border-top: 1px solid #DA4156;
+}
+
+.principal {
+    display: flex;
+    width: 100%;
+}
+
+.alinhaTitulo{
+    width: 100%;
+    display: flex;
+}
+
+.alinhaTitulo>div{
+    width: 50%;
+}
+.alinhaTitulo>:last-child{
+    padding-top: 1%;
+}
+.principal>:first-child{
+    margin-right: 1%;
+   
+}
+.sections {
+    
+    margin-top: 3%;
+    width: 50%;
+}
+h2{
+    text-align: center;
+}
+.principal>:last-child>h2{
+    color: transparent;
+}
+
+
+.form-feedback>:last-child{
+    background-color: white;
+    border-color: transparent;
+    color: #DA4156;
+}
+.form-feedback>:last-child:hover{
+    background-color: #F0F0F0;
+}
+.card{
+    border-top: 1px solid #DA4156;
+    
+}
+.card-body {
+    background-color: white;
+    color: black;
+}
+.feedback{
+    background-color: #DA4156;
+    padding: 1%;
+    width: 20%;
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+}
+.feedback h4{
+    color: white;
+}
+.form-control{
+    height: calc(3.5em + .75rem + 2px);
+    border: 1px solid transparent;
 }

@@ -6,7 +6,6 @@
     list-style: none;
     text-decoration: none;
 }
-
 .cont {
     max-width: 1920px;
     width: 100%;
@@ -14,29 +13,20 @@
     max-height: 1080px;
     height: 100%;
 }
-
 /* Header */
-
 .menu {
     height: 60px;
-    background-color: #FF4500;
+    background-color: #DA4156;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
-
 .menu>ul {
     display: flex;
     align-items: center;
     margin: 0;
 }
-
 .menu>ul>li {
     padding-right: 5%;
-}
-
-h1{
-    text-align: center;
-    margin-top: 2%;
 }
 /* Form */

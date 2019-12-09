@@ -4,8 +4,8 @@ if ($db = mysqli_connect(
     'localhost',
     'root',
     '',
-    'bankaccount',
-    3307
+    'Lionsbank',
+    3306
 )) {
 } else {
     die("Problema ao conectar ao SGDB");

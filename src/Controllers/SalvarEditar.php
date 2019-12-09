@@ -13,29 +13,22 @@ $telefone = $_POST['telefone'];
 
 $hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    $preparada = mysqli_prepare($db, '	UPDATE usuarios
-                                                SET
-                                                nome = ?,
-                                                sobrenome = ?,
-                                                email = ?,
-                                                senha = ?,
-                                                cpf = ?,
-                                                telefone = ?
-                                                WHERE
-                                                idUsuario = ?');
-    mysqli_stmt_bind_param($preparada,
-                            'ssssssi',
-                            $nome,
-                            $sobrenome,
-                            $email,
-                            $hash,
-                            $cpf,
-                            $telefone,
-                            $id
-                          );
+if (!empty($senha)) {
+    $preparada = mysqli_prepare($db, 'UPDATE usuarios SET nome = ?, sobrenome = ?,email = ?, senha = ?,
+                                      cpf = ?, telefone = ? WHERE idUsuario = ?');
+    mysqli_stmt_bind_param($preparada, 'ssssssi', $nome, $sobrenome, $email, $hash, $cpf, $telefone, $id);
     if (mysqli_stmt_execute($preparada)) {
         echo "Dados de $nome atualizados com sucesso";
-        
+
     }
-    // sleep(3);
-    header("Location: ../Views/PerfilView.php");
+} else {
+    $preparada = mysqli_prepare($db, 'UPDATE usuarios SET nome = ?, sobrenome = ?,email = ?,
+                                      cpf = ?, telefone = ? WHERE idUsuario = ?');
+    mysqli_stmt_bind_param($preparada, 'sssssi', $nome, $sobrenome, $email, $cpf, $telefone, $id);
+    if (mysqli_stmt_execute($preparada)) {
+        echo "Dados de $nome atualizados com sucesso";
+
+    }
+}   
+    sleep(1);
+header("Location: ../Views/PerfilView.php");

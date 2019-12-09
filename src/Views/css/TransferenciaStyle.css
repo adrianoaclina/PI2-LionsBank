@@ -7,7 +7,6 @@
     text-decoration: none;
     
 }
-
 .cont {
     max-width: 1366px;
     width: 100%;
@@ -18,7 +17,7 @@
 /* Header */ 
 .menu {
     height: 60px;
-    background-color: #FF4500;
+    background-color: #DA4156;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -30,13 +29,10 @@
 }
 .menu>ul>li{
     padding-right: 5%;
-
 }
-
 hr{
     height: 3vh;
 }
-
 :-ms-input-placeholder{
     opacity: 50%;
 }

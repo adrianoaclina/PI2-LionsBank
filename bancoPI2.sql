@@ -1,48 +1,49 @@
-create database BankAccount;
-drop database bankaccount;
-use BankAccount;
+create database Lionsbank;
+drop database Lionsbank;
+use Lionsbank;
 
--- -----------------------------------------------------
--- Table `Banco`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Banco` (
-  `idBanco` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45)
-  );
-insert into Banco(nome) values ("Bank Account");
 -- -----------------------------------------------------
 -- Table `Conta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Conta` (
+CREATE TABLE IF NOT EXISTS Lionsbank.`Conta` (
   `idConta` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `saldo` DOUBLE NOT NULL,
+  `saldo` DECIMAL(10,2) NOT NULL,
   `token` VARCHAR(32) NOT NULL
   );
-select * from Conta;
+select * from Lionsbank.conta;
 -- -----------------------------------------------------
 -- Table `Usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Usuarios` (
+CREATE TABLE IF NOT EXISTS Lionsbank.`Usuarios` (
   `idUsuario` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `sobrenome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(255) NOT NULL,
-  `cpf` VARCHAR(11) NOT NULL,
-  `telefone` VARCHAR(11) NOT NULL,
+  `cpf` VARCHAR(14) NOT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
   `token` VARCHAR(32) NOT NULL);
-  
-select * from Usuarios;
+select * from Lionsbank.Usuarios;
 
+select * from lionsbank.usuarios where idUsuario = 15;
+SELECT 
+    CASE WHEN lionsbank.usuarios IS NULL THEN 1 ELSE lionsbank.usuarios END
+FRO
 -- -----------------------------------------------------
 -- Table `Transferencia`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Transferencia` (
+CREATE TABLE IF NOT EXISTS Lionsbank.`Transferencia` (
   `idTransferencia` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `remetente` VARCHAR(45) NOT NULL,
-  `destinatario` VARCHAR(45) NOT NULL,
-  `valor` DOUBLE NOT NULL,
-  `data` DATETIME NOT NULL);
+  `depositante` VARCHAR(45) NOT NULL,
+  `recebedor` VARCHAR(45) NOT NULL,
+  `valor` DECIMAL(10,2) NOT NULL,
+  `dataT` DATETIME NOT NULL);
+  select * from Lionsbank.Transferencia;
+
+CREATE TABLE IF NOT EXISTS Lionsbank.`Feedbacks` (
+  `idFeedbacks` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `texto` VARCHAR(255) NOT NULL);
+select * from Lionsbank.Feedbacks;
 
 SET SQL_MODE=0;
 SET FOREIGN_KEY_CHECKS=OLD_FOREIGN_KEY_CHECKS;
