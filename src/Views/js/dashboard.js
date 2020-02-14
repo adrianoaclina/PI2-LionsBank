@@ -20,14 +20,14 @@ $(document).ready(function () {
                                 '" data-toggle="modal" data-target="#modalDetalhes"><i class="material-icons">reorder</i></button></td></tr>');
                         }
                     } else {
-                        dados[i].id = dados[i+1];
+                        dados[i].id = dados[i + 1];
                         if (dados[i].recebedor == dados[i].id) {
                             $('#tbody').append('<tr><td>' + dados[i].idTransferencia + '</td><td style="color: green;">' + dados[i].valor + '</td><td>' + dados[i].dataT + '</td><td><button class="btn delete" onclick="deletar(this);" style="padding: 0rem .75rem;"  name="deletar" value = "' + dados[i].idTransferencia +
                                 '"><i class="material-icons">delete_forever</i></button></td><td><button  class="btn detalhes" onclick="detalhes(this);" style="padding: 0rem .75rem;" name="detalhes" value="' + dados[i].idTransferencia +
                                 '" data-toggle="modal" data-target="#modalDetalhes"><i class="material-icons">reorder</i></button></td></tr>');
                         } else {
                             $('#tbody').append('<tr><td>' + dados[i].idTransferencia + '</td><td style="color: red;">(' + dados[i].valor + ')</td><td>' + dados[i].dataT + '</td><td><button class="btn delete" onclick="deletar(this); "style="padding: 0rem .75rem;" name="deletar" value = "' + dados[i].idTransferencia +
-                                '"><i class="material-icons">delete_forever</i></button></td><td><button  class="btn detalhes" onclick="detalhes(this);" style="padding: 0rem .75rem;" name="detalhes" value="'+dados[i].idTransferencia+
+                                '"><i class="material-icons">delete_forever</i></button></td><td><button  class="btn detalhes" onclick="detalhes(this);" style="padding: 0rem .75rem;" name="detalhes" value="' + dados[i].idTransferencia +
                                 '" data-toggle="modal" data-target="#modalDetalhes"><i class="material-icons">reorder</i></button></td></tr>');
                         }
                     }

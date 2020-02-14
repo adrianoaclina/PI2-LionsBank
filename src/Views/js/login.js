@@ -1,7 +1,7 @@
 // LOGIN VIA AJAX
 $(document).ready(function () {
 	$('.mssg').hide(); //Esconde o elemento com id errolog
-	$('.cpf').mask('000.000.000-00', {reverse: true});
+	$('.cpf').mask('000.000.000-00', { reverse: true });
 	$('.tel').mask('(00) 00000-0000');
 	$('#form-login').submit(function () { 	//Ao submeter formulário
 		var login = $('#login-email').val();	//Pega valor do campo email

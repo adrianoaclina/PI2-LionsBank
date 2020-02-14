@@ -4,7 +4,7 @@ include_once("../Configs/conexao.php");
 
 $consulta = "SELECT * FROM Transferencia where depositante = {$_SESSION['idUsuario']} or recebedor = {$_SESSION['idUsuario']}";
 $con = $db->query($consulta) or die($db->error);
-// $listaT = $con->fetch_assoc();
+
 while($listaT = $con->fetch_array()){
     $vetor[] = array_map('utf8_encode', $listaT);
     $vetor[] = $_SESSION['idUsuario'];

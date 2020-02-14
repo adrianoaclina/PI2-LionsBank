@@ -1,5 +1,5 @@
 window.onload = function () {
-    
+
     var ç = document.querySelector.bind(document);
     $('#mssg-cad-error').hide();
     $('#mssg-cad-sucess').hide();

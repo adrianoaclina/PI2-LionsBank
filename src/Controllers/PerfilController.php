@@ -8,5 +8,4 @@ $con = $db->query($consulta) or die($db->error);
 $usuario = $con->fetch_assoc();
 
 echo json_encode($usuario); 
-// $array = array($usuario['idUsuario'], $usuario['nome'], $usuario['sobrenome'], $usuario['email'],$usuario['cpf'],$usuario['telefone']);
 

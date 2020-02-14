@@ -3,8 +3,8 @@ window.onload = function () {
     var btnTransferir = ç("#submit");
     $('#mssg-cad-error').hide();
     $('#mssg-cad-sucess').hide();
-    $('.cpf').mask('000.000.000-00', {reverse: true});
-    $('.valor').mask('0000000000,00', {reverse: true});
+    $('.cpf').mask('000.000.000-00', { reverse: true });
+    $('.valor').mask('0000000000,00', { reverse: true });
     btnTransferir.onclick = function (event) {
         event.preventDefault();
         var ajax = new XMLHttpRequest();
